@@ -10,55 +10,56 @@
 
 /* Begynd her... */
 
-.section {
+.section { 
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
+   align-items: center;
 
-  .card:not(:has(img)) {
-    height: 100svh;
-    align-content: center;
-    justify-items: center;
 
-    > * + * {
+    div > h1,p:not(:has(img)) {
       padding-bottom: 1rem;
     }
-  }
+  
 
-  .card:has(img) {
+  & > div:has(img) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items
 
     gap: 1rem;
 
-    & > :nth-last-child(1) {
+    & > :first-child {
       grid-column: 2;
-      grid-row: 4;
     }
 
-    & > :nth-last-child(2) {
+    & > :nth-child(2) {
       grid-column: 1;
       grid-row: 2;
     }
+    & > :nth-child(3) {
+      grid-column: 2;
+      grid-row: 2/4;
+    }
 
-    & > :nth-last-child(4) {
+    & > :nth-child(4) {
       grid-column: 3;
       grid-row: 2;
     }
 
-    & > :nth-last-child(5) {
-      grid-column: 2;
-      grid-row: 2/3;
-    }
-
-    & > :nth-last-child(6) {
-      grid-column: 2;
-      grid-row: 1;
-    }
-
-    & > :nth-last-child(7) {
+    & > :nth-child(5) {
       grid-column: 1;
-      grid-row: 2;
+      grid-row: 3;
+    }
+
+    & > :nth-child(6) {
+      grid-column: 3;
+      grid-row: 3;
+    }
+
+    & > :nth-child(7) {
+      grid-column: 2;
+      grid-row: 4;
     }
   }
 }
