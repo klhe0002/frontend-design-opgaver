@@ -1,16 +1,71 @@
 :root {
-    background: #E3EDFB;
+  background: #e3edfb;
 
-    --color-icon: #0B3A67;
+  --color-icon: #0b3a67;
 
-    --image-width: 8rem;
-    --card-padding: 1rem;
+  --image-width: 8rem;
+  --card-padding: 1rem;
 
-    --font-heading: 1.75rem;
+  --font-heading: 1.75rem;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+  /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
+  --hide-overlay: 1;
 }
 
-
 /* Begynd her... */
+
+img {
+  width: var(--image-width);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--font-heading);
+  color: black;
+}
+
+h2 {
+  font-size: 1rem;
+  color: darkslategrey;
+}
+
+svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--color-icon);
+}
+
+section {
+  background: white;
+  width: 25rem;
+  margin: 2rem auto;
+  padding: var(--card-padding);
+  border-radius: 0.5rem;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* & > div > * {
+  display: grid;
+  padding-bottom: 1rem;
+  justify-self: start;
+} */
+
+.text {
+  display: grid;
+  padding-bottom: 1rem;
+  justify-self: start;
+}
+
+/* div:has(svg) > * {
+  display: flex;
+} */
+
+.svg {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
