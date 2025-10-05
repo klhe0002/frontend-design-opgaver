@@ -83,6 +83,9 @@ article h2 + * {
   font-size: 0.9rem;
   line-height: 1.5;
   text-wrap: pretty;
+
+  margin-block-start: var(--flow-space);
+  --flow-space: 0.25rlh;
 }
 
 .amenities-details {
