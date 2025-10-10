@@ -22,8 +22,9 @@ const { cardContent } = Astro.props;
     overflow-x: auto;
 
     li {
-      flex-basis: min(400px, 90%);
-      flex-shrink: 0;
+      /* flex-basis: min(400px, 90%); */
+      /* flex-shrink: 0; */
+      flex: 1 0 400px;
       background: var(--card-background);
       color: var(--card-text-color);
       border-radius: var(--card-border-radius);
@@ -43,6 +44,7 @@ const { cardContent } = Astro.props;
     padding-inline: max(1rem, 50% - var(--content-width) / 2);
 
     > ul {
+      /* kan også overflow inline auto */
       scroll-snap-type: x mandatory;
       grid-column: full;
       padding-inline: max(1rem, 50% - var(--content-width) / 2);
@@ -50,8 +52,7 @@ const { cardContent } = Astro.props;
     }
 
     > li {
-   
-        scroll-snap-align: center;
-    
+      scroll-snap-align: center;
+    }
   }
 </style>
